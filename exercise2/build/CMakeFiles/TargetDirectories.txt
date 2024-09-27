@@ -1,0 +1,3 @@
+/Fuzzing-Module/exercise2/build/CMakeFiles/medium.dir
+/Fuzzing-Module/exercise2/build/CMakeFiles/edit_cache.dir
+/Fuzzing-Module/exercise2/build/CMakeFiles/rebuild_cache.dir
