@@ -1,0 +1,3 @@
+/Fuzzing-Module/exercise1/build/CMakeFiles/simple_crash.dir
+/Fuzzing-Module/exercise1/build/CMakeFiles/edit_cache.dir
+/Fuzzing-Module/exercise1/build/CMakeFiles/rebuild_cache.dir
