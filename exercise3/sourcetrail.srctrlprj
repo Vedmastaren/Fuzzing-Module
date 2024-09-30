@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <config>
     <source_groups>
-        <source_group_8c3b0345-9fd8-49e6-994d-d060a3148918>
+        <source_group_b8161e5d-006b-4e3a-b94a-949e9f451b13>
             <build_file_path>
                 <compilation_db_path>build/compile_commands.json</compilation_db_path>
             </build_file_path>
@@ -14,7 +14,7 @@
             </pch_flags>
             <status>enabled</status>
             <type>C/C++ from Compilation Database</type>
-        </source_group_8c3b0345-9fd8-49e6-994d-d060a3148918>
+        </source_group_b8161e5d-006b-4e3a-b94a-949e9f451b13>
     </source_groups>
     <version>8</version>
 </config>

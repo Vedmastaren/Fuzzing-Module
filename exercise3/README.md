@@ -20,7 +20,6 @@ If you want to learn more about how CMake works, you can read about it at [this 
 9. Logga in
 - username: kali
 - password: kali
-
 10. Tryck på applications i din VM
 11. Starta terminalen
 12. Skriv följande: 
@@ -29,7 +28,6 @@ wget https://github.com/CoatiSoftware/Sourcetrail/releases/download/2021.4.19/So
 chmod +x Sourcetrail_2021_4_19_Linux_64bit.AppImage
 14. kör filen:
 ./Sourcetrail_2021_4_19_Linux_64bit.AppImage
-
 15. installera git om det inte finns:
 sudo apt install git
 16. OBS !!! Projektet måste vara public
@@ -47,21 +45,44 @@ cmake --version
 24. Detta ger dig en json fil:
 compile_commands.json
 
-25. Tryck på New Project i Sourcetrail
-26. Namege ditt projekt: sourcetrail
-27. Projektets filsökväg, i detta fall: /home/kali/Fuzzing-Module/exercise3
-28. Tryck på "Add Source Group"
-29. Välj C/C++ from Compilation Database*
-30. Tryck på de tre prickarna *** vilket öppnar exercise3
-31. Välj sedan compile_commands.json
-32. Tryck på Open
-33. Tryck på Create
-34. Tryck på Start
 
-35. Med tanke på att vi gjorde steg 21-24 i vår VM och inte innan vi clonade ner behöver vi göra en SSH-nyckel, följ dessa steg:
-36. ssh-keygen -t ed25519 -C "DINEMAIL@gmail.com"\n
-37. eval "$(ssh-agent -s)"\nssh-add ~/.ssh/id_ed25519\n
-38. cat ~/.ssh/id_ed25519.pub\n
-39. Gå in på Github -> Settings -> SSH and GPG keys -> New SSH och klista in allt från steg 38
-40. Ändra från HTTP till SSH:
-git remote set-url origin git@github.com:DITTGITREPO/Fuzzing-Module.git\n
+# I Ubuntu med sourcetrail
+1. Ladda ner sourcetrail: Sourcetrail_2021_4_19_Linux_64bit.tar.gz
+2. Cd in till sourcetrail mappen
+3. chmod install.sh
+4. sudo bash install.sh
+5. kör sourcetrail: sourcetrail
+6. cd exercise3
+7. mkdir build
+8. cd build
+9. cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..
+10. Detta ger json filen:
+compile_commands.json
+11. Tryck på New Project i Sourcetrail
+12. Namege ditt projekt: sourcetrail
+13. Projektets filsökväg, i detta fall: /home/kali/Fuzzing-Module/exercise3
+14. Tryck på "Add Source Group"
+15. Välj C/C++ from Compilation Database*
+16. Tryck på de tre prickarna *** vilket öppnar exercise3
+17. Välj sedan compile_commands.json
+18. Tryck på Open
+19. Tryck på Create
+20. Tryck på Start
+
+# I Ubuntu med fuzzing
+1. ladda ner afl++ image: sudo docker run --name fuzztest -it aflplusplus/aflplusplus
+2. docker ps
+3. docker commit + id från ps
+4. docker run --name exercise3 -it -v $(pwd):/Fuzzing-Module + sha koden på 10 första tecknen
+
+# Nu är vi inne i docker container
+5. cd exercise3 
+6. mkdir seeds
+7. cd seeds
+8. kör detta kommando 5ggr: for i in {0..4}; do dd if=/dev/urandom of=seed_$i bs=64 count=10; done
+9. cd ..
+10. mkdir build
+11. cd build
+12. CC=/AFLplusplus/afl-clang-fast CXX=/AFLplusplus/afl-clang-fast++ cmake ..
+13. make
+14. /AFLplusplus/afl-fuzz -i ../seeds/ -o out -m none -d -- ./specs-slice

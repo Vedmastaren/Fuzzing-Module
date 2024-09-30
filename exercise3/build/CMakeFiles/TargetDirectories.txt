@@ -1,4 +1,4 @@
-/home/kali/Fuzzing-Module/exercise3/build/CMakeFiles/drone.dir
-/home/kali/Fuzzing-Module/exercise3/build/CMakeFiles/specs-slice.dir
-/home/kali/Fuzzing-Module/exercise3/build/CMakeFiles/edit_cache.dir
-/home/kali/Fuzzing-Module/exercise3/build/CMakeFiles/rebuild_cache.dir
+/Fuzzing-Module/exercise3/build/CMakeFiles/drone.dir
+/Fuzzing-Module/exercise3/build/CMakeFiles/specs-slice.dir
+/Fuzzing-Module/exercise3/build/CMakeFiles/edit_cache.dir
+/Fuzzing-Module/exercise3/build/CMakeFiles/rebuild_cache.dir

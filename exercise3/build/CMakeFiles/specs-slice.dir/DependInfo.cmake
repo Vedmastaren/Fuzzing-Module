@@ -8,16 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/kali/Fuzzing-Module/exercise3/specs-slice.cpp" "CMakeFiles/specs-slice.dir/specs-slice.cpp.o" "gcc" "CMakeFiles/specs-slice.dir/specs-slice.cpp.o.d"
-  "/home/kali/Fuzzing-Module/exercise3/specs.cpp" "CMakeFiles/specs-slice.dir/specs.cpp.o" "gcc" "CMakeFiles/specs-slice.dir/specs.cpp.o.d"
+  "/Fuzzing-Module/exercise3/specs-slice.cpp" "CMakeFiles/specs-slice.dir/specs-slice.cpp.o" "gcc" "CMakeFiles/specs-slice.dir/specs-slice.cpp.o.d"
+  "/Fuzzing-Module/exercise3/specs.cpp" "CMakeFiles/specs-slice.dir/specs.cpp.o" "gcc" "CMakeFiles/specs-slice.dir/specs.cpp.o.d"
   )
 
-# Targets to which this target links which contain Fortran sources.
-set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
-  )
-
-# Targets to which this target links which contain Fortran sources.
-set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.
