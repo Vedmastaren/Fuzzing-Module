@@ -75,6 +75,17 @@ compile_commands.json
 3. docker commit + id från ps
 4. docker run --name exercise3 -it -v $(pwd):/Fuzzing-Module + sha koden på 10 första tecknen
 
+# För att köra docker container
+1. sudo docker ps -a
+2. sudo docker start fuzztest
+3. sudo docker start exercise3
+4. sudo docker exec -it exercise3 bash
+5. cd ..
+6. ls
+7. cd Fuzzing-Module
+8. cd exercise3
+9. /AFLplusplus/afl-fuzz -i ../seeds/ -o out -m none -d -- ./specs-slice
+
 # Nu är vi inne i docker container
 5. cd exercise3 
 6. mkdir seeds
